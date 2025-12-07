@@ -1,0 +1,28 @@
+{
+  // VS Code debug configurations for this Node.js service
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "pwa-node",
+      "request": "launch",
+      "name": "Launch Server (node)",
+      "program": "${workspaceFolder}/main/serverExpress.js",
+      "cwd": "${workspaceFolder}",
+      "envFile": "${workspaceFolder}/.env",
+      "skipFiles": ["<node_internals>/**"],
+      "console": "integratedTerminal"
+    },
+    {
+      "type": "pwa-node",
+      "request": "launch",
+      "name": "Launch Server (nodemon, auto-restart)",
+      "runtimeExecutable": "nodemon",
+      "program": "${workspaceFolder}/main/serverExpress.js",
+      "cwd": "${workspaceFolder}",
+      "envFile": "${workspaceFolder}/.env",
+      "restart": true,
+      "console": "integratedTerminal",
+      "skipFiles": ["<node_internals>/**"]
+    }
+  ]
+}

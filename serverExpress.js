@@ -9,7 +9,7 @@ app.use(express.urlencoded({ extended: true })); // enables req.body for form su
 const router = express.Router();
 
 // POST /src handler — reads values from req.body
-router.post("/src", (req, res) => {
+app.post("/", (req, res) => {
   const { numberOne, numberTwo } = req.body;
   console.log("numberOne, numberTwo :", numberOne, numberTwo);
   res.send("Post");
@@ -20,7 +20,7 @@ app.use(router);
 
 // simple GET /
 app.get("/", (req, res) => {
-  res.send("Server is running 2");
+  res.send("Server is running");
 });
 
 // start server
